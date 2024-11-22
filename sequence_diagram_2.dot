@@ -1,0 +1,12 @@
+digraph Sequence2 {
+    rankdir=TB;
+
+    Doctor [label="Врач", shape=box];
+    LabTechnician [label="Лаборант", shape=box];
+    Database [label="База данных", shape=box];
+
+    Doctor -> LabTechnician [label="Назначает анализы"];
+    LabTechnician -> Database [label="Сохраняет результаты"];
+    Database -> Doctor [label="Передает результаты"];
+    Doctor -> Patient [label="Ставит диагноз"];
+}

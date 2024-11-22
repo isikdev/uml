@@ -1,0 +1,10 @@
+digraph DeploymentDiagram {
+    rankdir=TB;
+
+    Client [label="Клиент\n(Браузер)", shape=box];
+    Server [label="Сервер\n(Приложение)", shape=box];
+    Database [label="База данных\n(Сервер БД)", shape=cylinder];
+
+    Client -> Server [label="HTTP/HTTPS"];
+    Server -> Database [label="SQL-запросы"];
+}

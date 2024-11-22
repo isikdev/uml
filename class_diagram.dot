@@ -1,0 +1,17 @@
+digraph ClassDiagram {
+    rankdir=TB;
+
+    node [shape=record];
+    Admin [label="{Администратор|+добавитьСотрудника()\l+удалитьСотрудника()\l+создатьОтчет()}"];
+    Nurse [label="{Медсестра|+добавитьПациента()\l+управлятьИнвентарем()}"];
+    Doctor [label="{Врач|+диагностировать()\l+лечитьПациента()}"];
+    Patient [label="{Пациент|+имя: string\l+id: int\l}"];
+    Ward [label="{Палата|+номер: int\l+вместимость: int\l}"];
+    Inventory [label="{Инвентарь|+название: string\l+количество: int\l}"];
+
+    Admin -> Nurse [label="управляет"];
+    Nurse -> Patient [label="помогает"];
+    Doctor -> Patient [label="лечит"];
+    Ward -> Patient [label="композиция"];
+    Inventory -> Ward [label="агрегация"];
+}

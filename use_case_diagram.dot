@@ -1,0 +1,25 @@
+digraph UseCase {
+    rankdir=LR;
+
+    node [shape=plaintext];
+    Manager [label="▲ Заведующий больницей"];
+    HeadNurse [label="▲ Старшая медсестра"];
+    Nurse [label="▲ Медсестра"];
+
+    node [shape=ellipse];
+    Auth [label="Аутентификация"];
+    WardMgmt [label="Управление палатами"];
+    StaffMgmt [label="Управление сотрудниками"];
+    ReportGen [label="Генерация отчета"];
+    InventoryMgmt [label="Управление инвентарем"];
+    AddPatient [label="Добавление пациента"];
+    Treatment [label="Лечение"];
+
+    Manager -> Auth;
+    Manager -> WardMgmt;
+    Manager -> StaffMgmt;
+    Manager -> ReportGen;
+    HeadNurse -> InventoryMgmt;
+    Nurse -> AddPatient;
+    Nurse -> Treatment;
+}

@@ -1,0 +1,6 @@
+dot -Tpng class_diagram.dot -o class_diagram.png
+dot -Tpng deployment_diagram.dot -o deployment_diagram.png
+dot -Tpng package_diagram.dot -o package_diagram.png
+dot -Tpng sequence_diagram_1.dot -o sequence_diagram_1.png
+dot -Tpng sequence_diagram_2.dot -o sequence_diagram_2.png
+dot -Tpng use_case_diagram.dot -o use_case_diagram.png

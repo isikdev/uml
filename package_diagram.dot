@@ -1,0 +1,14 @@
+digraph PackageDiagram {
+    rankdir=TB;
+
+    Authentication [label="Аутентификация"];
+    WardManagement [label="Управление палатами"];
+    EmployeeManagement [label="Управление сотрудниками"];
+    InventoryManagement [label="Управление инвентарем"];
+    PatientData [label="Данные пациента"];
+
+    Authentication -> WardManagement;
+    WardManagement -> PatientData;
+    EmployeeManagement -> InventoryManagement;
+    PatientData -> InventoryManagement;
+}

@@ -1,0 +1,12 @@
+digraph Sequence1 {
+    rankdir=TB;
+
+    Patient [label="Пациент", shape=box];
+    Nurse [label="Медсестра", shape=box];
+    Database [label="База данных", shape=box];
+
+    Patient -> Nurse [label="Передает данные"];
+    Nurse -> Database [label="Сохраняет данные"];
+    Database -> Nurse [label="Подтверждение"];
+    Nurse -> Patient [label="Назначает палату"];
+}
